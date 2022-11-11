@@ -45,18 +45,13 @@ const Paciente = ( { paciente, setPaciente, eliminarPaciente } ) => {
             <PureModal
             header ="Eliminar Cita"
             footer={
-                <div className='flex gap-9 '>
-                <button className='bg-red-700 ml-4 text-white p-1' onClick={handleEliminar}>Eliminar</button>
-                <button className='bg-indigo-700 text-white p-1'>Cancelar</button>
+                <div className='flex gap-6 '>
+                <button className='bg-red-700 ml-4 text-white p-2 rounded-md' onClick={handleEliminar}>Eliminar</button>
+                <button className='bg-indigo-700 text-white p-2 rounded-md' onClick={() => setModal(false)}>Cancelar</button>
                 </div>
             }
             isOpen={modal}
-            closeButton="close"
-            closeButtonPosition="bottom"
-            onClose={() => {
-                setModal(false);
-                return true;
-            }}
+           
             >
             <p className='text-center'>¿Deseas Eliminar esta Cita? </p>
             </PureModal>
